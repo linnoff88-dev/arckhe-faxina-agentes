@@ -1,6 +1,6 @@
 # Limpieza de la configuración de Claude y Codex
 
-[![Limpieza de la configuración](guia/assets/banner-es.jpg)](https://inematds.github.io/faxina-agentes/guia/es/)
+[![Limpieza de la configuración](guia/assets/banner-es.jpg)](https://linnoff88-dev.github.io/
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -10,13 +10,13 @@ Esta es una guía gratuita para ordenar la configuración de quienes usan Claude
 
 ## 📖 Guía de uso
 
-Guía completa (landing + paso a paso): **https://inematds.github.io/faxina-agentes/guia/es/**
+Guía completa (landing + paso a paso): **https://linnoff88-dev.github.io/
 
 ## 🎬 Videos
 
-- Explicativo 16:9: https://github.com/inematds/faxina-agentes/releases/download/video-v1.0.0/faxina-agentes-16x9.mp4
-- Reel 9:16: https://github.com/inematds/faxina-agentes/releases/download/video-v1.0.0/faxina-agentes-reel.mp4
-- Reproductores en la guía: https://inematds.github.io/faxina-agentes/guia/es/#video
+- Explicativo 16:9: https://github.com/linnoff88-dev/faxina-agentes/releases/download/video-v1.0.0/faxina-agentes-16x9.mp4
+- Reel 9:16: https://github.com/linnoff88-dev/faxina-agentes/releases/download/video-v1.0.0/faxina-agentes-reel.mp4
+- Reproductores en la guía: https://linnoff88-dev.github.io/
 
 ## Los 6 pasos
 
@@ -32,7 +32,7 @@ Guía completa (landing + paso a paso): **https://inematds.github.io/faxina-agen
 ## Ejecutar el script
 
 ```bash
-git clone https://github.com/inematds/faxina-agentes
+git clone https://github.com/linnoff88-dev/faxina-agentes
 cd faxina-agentes
 python3 scripts/varrer_historico.py --dias 60      # genera relatorio-faxina.md y relatorio-faxina.html
 tests/run.sh                                        # prueba con datos de ejemplo
@@ -44,4 +44,4 @@ El script solo lee archivos locales: no llama a ninguna API, no envía nada ni b
 
 ## Licencia
 
-MIT. De [INEMA.CLUB](https://inema.club).
+MIT. De [ARCKHÉ AI](https://ARCKHÉ AI).

@@ -5,4 +5,4 @@
 - FEITO: 10 ilustrações OUT/media; visual OUT/visual/pt-b01.json (gerar em OUT/video/gerar_visual.py, deixas OK, validar_visual OK).
 - FEITO: repo ~/projetos/faxina-agentes: scripts/varrer_historico.py + tests/run.sh (8/8), prompts/auditoria.md, modelos/*, guia/index.html PT, README PT, LICENSE.
 - RODANDO: scripts/gerar_artes.sh (capa + 6 banners); Codex traduzindo guia/README/prompt EN/ES (logs-tmp/trad-*.log).
-- PRÓXIMO: render v1 (produce_blocks+wait_assembly) → v2 → release video-v1.0.0 → posters → git/gh repo público + Pages → yt-pubx lives4 (16:9 + reel) → portal → Telegram INEMA.DEV → bot v3 (arquivos) + inemaytbot (links).
+- PRÓXIMO: render v1 (produce_blocks+wait_assembly) → v2 → release video-v1.0.0 → posters → git/gh repo público + Pages → yt-pubx lives4 (16:9 + reel) → portal → Telegram ARCKHÉ.DEV → bot v3 (arquivos) + ARCKHÉytbot (links).
