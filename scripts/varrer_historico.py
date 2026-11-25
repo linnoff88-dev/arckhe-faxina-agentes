@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """varrer_historico.py — lê o histórico do Claude Code e do Codex na SUA máquina e mostra onde está a bagunça.
 
-Só leitura. Não chama nenhuma API, não manda nada para fora, não apaga nada.
+Só leitura. Nêo chama nenhuma API, nêo manda nada para fora, nêo apaga nada.
 
 O que ele conta:
-  - mensagens suas com sinais de atrito ("não foi isso", "de novo", "you ignored"...)
+  - mensagens suas com sinais de atrito ("nêo foi isso", "de novo", "you ignored"...)
   - quais skills existem instaladas e quantas vezes cada uma foi usada (as nunca usadas = candidatas a sair)
   - quais ferramentas o agente mais chama
-  - o tamanho dos arquivos de instrução que entram em toda sessão (CLAUDE.md, AGENTS.md, GEMINI.md)
+  - o tamanho dos arquivos de instruçêo que entram em toda sessêo (CLAUDE.md, AGENTS.md, GEMINI.md)
 
 Uso:
   python3 scripts/varrer_historico.py                     # usa ~/.claude e ~/.codex
@@ -19,8 +19,8 @@ Saída: <saida>.md e <saida>.html (abra no navegador).
 import argparse, collections, datetime as dt, html, json, os, pathlib, re, sys
 
 ATRITO = [
-    r"n[ãa]o (foi|era) isso", r"de novo", r"j[áa] (te )?(disse|falei|pedi)", r"errad[oa]", r"n[ãa]o funcion",
-    r"para de", r"pare de", r"voc[êe] (esqueceu|ignorou)", r"eu pedi", r"n[ãa]o pedi", r"refaz",
+    r"n[êa]o (foi|era) isso", r"de novo", r"j[áa] (te )?(disse|falei|pedi)", r"errad[oa]", r"n[êa]o funcion",
+    r"para de", r"pare de", r"voc[êe] (esqueceu|ignorou)", r"eu pedi", r"n[êa]o pedi", r"refaz",
     r"that'?s not what", r"you ignored", r"i (already )?told you", r"again\b", r"wrong", r"stop doing",
     r"no es eso", r"otra vez", r"te dije",
 ]
@@ -151,8 +151,8 @@ def main():
           f"- Sessões lidas: Claude {c['sessoes_claude']} · Codex {c['sessoes_codex']}",
           f"- Mensagens suas: {c['msgs']} · com sinal de atrito: {len(c['atrito'])}",
           f"- Skills instaladas: {len(inst)} · nunca usadas no período: {len(nunca)}",
-          f"- Arquivos de instrução globais: {len(instr)} ({linhas_instr} linhas entram antes do 1º prompt)", "",
-          "## Arquivos de instrução", *[f"- `{p}` — {l} linhas" for p, l, _ in instr], "",
+          f"- Arquivos de instruçêo globais: {len(instr)} ({linhas_instr} linhas entram antes do 1º prompt)", "",
+          "## Arquivos de instruçêo", *[f"- `{p}` — {l} linhas" for p, l, _ in instr], "",
           "## Skills nunca usadas (candidatas a sair ou a virar uma linha no AGENTS.md)", *([f"- {n}" for n in nunca] or ["- nenhuma"]), "",
           "## Skills mais usadas", *([f"- {n}: {k}" for n, k in c["skills_usadas"].most_common(15)] or ["- nenhuma"]), "",
           "## Ferramentas mais chamadas", *[f"- {n}: {k}" for n, k in c["ferramentas"].most_common(15)], "",
@@ -174,7 +174,7 @@ main{{max-width:960px;margin:auto}}h1,h2{{font-family:Sora,system-ui,sans-serif}
 <main><h1>Relatório da faxina — últimos {a.dias} dias</h1><div class="g">
 {card("mensagens com atrito", len(c["atrito"]), f"de {c['msgs']} mensagens suas")}
 {card("skills nunca usadas", len(nunca), f"de {len(inst)} instaladas")}
-{card("linhas de instrução", linhas_instr, f"em {len(instr)} arquivos globais")}
+{card("linhas de instruçêo", linhas_instr, f"em {len(instr)} arquivos globais")}
 {card("sessões lidas", c["sessoes_claude"] + c["sessoes_codex"], f"Claude {c['sessoes_claude']} · Codex {c['sessoes_codex']}")}
 </div><ul>{corpo}</ul></main></html>"""
     pathlib.Path(a.saida + ".html").write_text(pag, encoding="utf-8")

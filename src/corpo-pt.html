@@ -53,16 +53,16 @@
 
 <section id="resumo" class="resumo"><div class="wrap">
   <span class="chip">Em resumo</span>
-  <p>Este é um guia grátis para arrumar o setup de quem usa o Claude Code e o Codex. Com o tempo, juntam-se arquivos de instrução repetidos, skills baixadas e nunca usadas, memórias velhas e regras que se contradizem; tudo isso entra no contexto antes do primeiro pedido e o agente passa a ignorar regras e gastar mais. O guia mostra uma auditoria feita com um prompt, um script que lê o seu histórico, um AGENTS.md único, pastas por negócio, playbooks e um filtro de três perguntas. Para usar, basta ter o Claude Code ou o Codex instalado e Python 3.</p>
+  <p>Este é um guia grátis para arrumar o setup de quem usa o Claude Code e o Codex. Com o tempo, juntam-se arquivos de instruçêo repetidos, skills baixadas e nunca usadas, memórias velhas e regras que se contradizem; tudo isso entra no contexto antes do primeiro pedido e o agente passa a ignorar regras e gastar mais. O guia mostra uma auditoria feita com um prompt, um script que lê o seu histórico, um AGENTS.md único, pastas por negócio, playbooks e um filtro de três perguntas. Para usar, basta ter o Claude Code ou o Codex instalado e Python 3.</p>
 </div></section>
 
 <section id="oque"><div class="wrap">
   <span class="chip">O que é</span>
   <h2>Por que o seu agente piora com o tempo</h2>
-  <p class="sub">Não é o modelo. É o que ele recebe antes de você digitar a primeira palavra.</p>
+  <p class="sub">Nêo é o modelo. É o que ele recebe antes de você digitar a primeira palavra.</p>
   <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="assets/banner-grade.jpg" alt="Os seis passos da faxina: auditoria, histórico, torre de controle, pastas, playbooks e filtro" loading="lazy" style="width:100%;display:block"></figure>
   <div class="grid g3">
-    <div class="card"><h3>🗂️ Ordens demais</h3><p>CLAUDE.md, AGENTS.md e GEMINI.md falando ao mesmo tempo, com regras que não batem entre si.</p></div>
+    <div class="card"><h3>🗂️ Ordens demais</h3><p>CLAUDE.md, AGENTS.md e GEMINI.md falando ao mesmo tempo, com regras que nêo batem entre si.</p></div>
     <div class="card"><h3>🧰 Skills paradas</h3><p>Pacotes instalados por causa de um tutorial e esquecidos. Cada um empurra o agente um pouco para o lado errado.</p></div>
     <div class="card"><h3>📉 Limite queimado</h3><p>Memória velha, notas antigas e arquivos temporários ocupam o contexto e o limite acaba antes do trabalho.</p></div>
   </div>
@@ -77,24 +77,24 @@
   <div style="height:30px"></div>
 
   <div class="passo">
-    <figure><img src="assets/03-auditoria.jpg" alt="Ilustração: a profissional examina uma estante com uma lupa enquanto o robô segura uma lista" loading="lazy"></figure>
+    <figure><img src="assets/03-auditoria.jpg" alt="Ilustraçêo: a profissional examina uma estante com uma lupa enquanto o robô segura uma lista" loading="lazy"></figure>
     <div><span class="num">1</span><h3>Auditoria com um prompt</h3>
-      <p class="mut">Não precisa de um prompt gigante. Diga três coisas: o que auditar, contra o quê e com que critério. O agente só lê e propõe; nada muda sem o seu OK.</p>
+      <p class="mut">Nêo precisa de um prompt gigante. Diga três coisas: o que auditar, contra o quê e com que critério. O agente só lê e propõe; nada muda sem o seu OK.</p>
 <pre><span class="c"># o prompt pronto para colar</span>
 <span class="k">cat</span> prompts/auditoria.md</pre></div>
   </div>
 
   <div class="passo">
-    <figure><img src="assets/04-historico.jpg" alt="Ilustração: o robô escaneia uma fita longa de conversas e um painel mostra notas por área" loading="lazy"></figure>
+    <figure><img src="assets/04-historico.jpg" alt="Ilustraçêo: o robô escaneia uma fita longa de conversas e um painel mostra notas por área" loading="lazy"></figure>
     <div><span class="num">2</span><h3>Um script lê o histórico</h3>
-      <p class="mut">Ler centenas de conversas inteiras com o agente custa caro. O script varre os arquivos de conversa do Claude e do Codex, conta mensagens com atrito ("não foi isso que eu pedi") e lista as skills que você nunca chamou. Só leitura, sem API.</p>
+      <p class="mut">Ler centenas de conversas inteiras com o agente custa caro. O script varre os arquivos de conversa do Claude e do Codex, conta mensagens com atrito ("nêo foi isso que eu pedi") e lista as skills que você nunca chamou. Só leitura, sem API.</p>
 <pre><span class="k">python3</span> scripts/varrer_historico.py --dias 60
 <span class="c"># ok: relatorio-faxina.md e relatorio-faxina.html | atrito … | skills nunca usadas …</span></pre>
       <p class="mut">Comece pelas limpezas de baixo risco: hook morto, arquivo temporário, skill parada há meses.</p></div>
   </div>
 
   <div class="passo">
-    <figure><img src="assets/05-torre.jpg" alt="Ilustração: torre de controle com um único painel e três pistas coloridas" loading="lazy"></figure>
+    <figure><img src="assets/05-torre.jpg" alt="Ilustraçêo: torre de controle com um único painel e três pistas coloridas" loading="lazy"></figure>
     <div><span class="num">3</span><h3>Um AGENTS.md como torre de controle</h3>
       <p class="mut">O que vale para todas as ferramentas fica num AGENTS.md só: regras de escrita, o que é "pronto", o que nunca fazer. O Codex lê esse arquivo direto; no Claude Code, o CLAUDE.md só aponta para ele. Regra específica fica separada só quando o recurso existe numa ferramenta.</p>
 <pre><span class="k">cp</span> modelos/AGENTS-raiz.md ~/trabalho/AGENTS.md
@@ -102,15 +102,15 @@
   </div>
 
   <div class="passo">
-    <figure><img src="assets/06-pastas.jpg" alt="Ilustração: arquivo organizado por cores, cada seção com seu cartão-guia" loading="lazy"></figure>
+    <figure><img src="assets/06-pastas.jpg" alt="Ilustraçêo: arquivo organizado por cores, cada seçêo com seu cartêo-guia" loading="lazy"></figure>
     <div><span class="num">4</span><h3>Uma pasta por negócio ou cliente</h3>
-      <p class="mut">Cada linha de negócio e cada cliente ganha uma pasta com o seu próprio AGENTS.md (tom, público, regras daquele lugar). Ele só entra quando o agente trabalha ali dentro, então nada vaza de um cliente para o outro.</p>
+      <p class="mut">Cada linha de negócio e cada cliente ganha uma pasta com o seu próprio AGENTS.md (tom, público, regras daquele lugar). Ele só entra quando o agente trabalha ali dentro, entêo nada vaza de um cliente para o outro.</p>
 <pre><span class="k">mkdir</span> -p ~/trabalho/{conteudo,vendas,clientes/cliente-a}
 <span class="k">cp</span> modelos/AGENTS-pasta.md ~/trabalho/clientes/cliente-a/AGENTS.md</pre></div>
   </div>
 
   <div class="passo">
-    <figure><img src="assets/07-playbooks.jpg" alt="Ilustração: a profissional fala num microfone e as folhas viram cadernos numa prateleira" loading="lazy"></figure>
+    <figure><img src="assets/07-playbooks.jpg" alt="Ilustraçêo: a profissional fala num microfone e as folhas viram cadernos numa prateleira" loading="lazy"></figure>
     <div><span class="num">5</span><h3>Playbooks no lugar de mais uma skill</h3>
       <p class="mut">O que você sabe fazer de cabeça vale mais que uma skill genérica. Grave uma hora explicando o processo, transcreva e peça ao agente para organizar em arquivos como <code>lancamento.md</code> e <code>aula.md</code>. O AGENTS.md de cima diz quando consultar cada um.</p>
 <pre><span class="k">mkdir</span> -p ~/trabalho/playbooks
@@ -118,7 +118,7 @@
   </div>
 
   <div class="passo">
-    <figure><img src="assets/02-bagunca.jpg" alt="Ilustração: sótão abarrotado de papéis, com o robô soterrado no meio" loading="lazy"></figure>
+    <figure><img src="assets/02-bagunca.jpg" alt="Ilustraçêo: sótêo abarrotado de papéis, com o robô soterrado no meio" loading="lazy"></figure>
     <div><span class="num">6</span><h3>Faxina agendada</h3>
       <p class="mut">A bagunça volta se ninguém limpa. Agende a mesma auditoria toda semana (tarefa agendada do Codex ou <code>/schedule</code> no Claude Code), com a regra: limpar sozinho só o que é de baixo risco; o resto vira lista para você decidir.</p>
 <pre><span class="c"># no Claude Code</span>
@@ -131,11 +131,11 @@
   <h2>O filtro de três perguntas</h2>
   <p class="sub">Um grau de erro na saída de um barco parece nada; no fim da viagem, ele chega a mais de cem quilômetros do destino. Cada skill fora do lugar é esse grau.</p>
   <div class="q">
-    <div class="card"><b>1</b><h3>Serve para quase toda tarefa?</h3><p>Se não serve, não instale. Aponte o agente para o repositório e copie só a linha que importa para o seu AGENTS.md.</p></div>
-    <div class="card"><b>2</b><h3>É útil só às vezes?</h3><p>Então fica na pasta do projeto que usa, nunca global. O resto do trabalho não carrega esse peso.</p></div>
-    <div class="card"><b>3</b><h3>Quem limpa?</h3><p>A faxina agendada da semana. Modelos melhores precisam de menos regras: tire peso, não acumule.</p></div>
+    <div class="card"><b>1</b><h3>Serve para quase toda tarefa?</h3><p>Se nêo serve, nêo instale. Aponte o agente para o repositório e copie só a linha que importa para o seu AGENTS.md.</p></div>
+    <div class="card"><b>2</b><h3>É útil só às vezes?</h3><p>Entêo fica na pasta do projeto que usa, nunca global. O resto do trabalho nêo carrega esse peso.</p></div>
+    <div class="card"><b>3</b><h3>Quem limpa?</h3><p>A faxina agendada da semana. Modelos melhores precisam de menos regras: tire peso, nêo acumule.</p></div>
   </div>
-  <figure style="margin:26px 0 0;border-radius:16px;overflow:hidden;border:1px solid var(--line)"><img src="assets/09-barco.jpg" alt="Ilustração: veleiro com duas rotas, uma certa e outra com um grau de desvio" loading="lazy" style="width:100%;display:block"></figure>
+  <figure style="margin:26px 0 0;border-radius:16px;overflow:hidden;border:1px solid var(--line)"><img src="assets/09-barco.jpg" alt="Ilustraçêo: veleiro com duas rotas, uma certa e outra com um grau de desvio" loading="lazy" style="width:100%;display:block"></figure>
 </div></section>
 
 <section id="video"><div class="wrap">

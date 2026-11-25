@@ -6,7 +6,7 @@
 
 ## O que é
 
-Este é um guia grátis para arrumar o setup de quem usa o Claude Code e o Codex. Com o tempo, juntam-se arquivos de instrução repetidos, skills baixadas e nunca usadas, memórias velhas e regras que se contradizem; tudo isso entra no contexto antes do primeiro pedido e o agente passa a ignorar regras e gastar mais. O guia mostra uma auditoria feita com um prompt, um script que lê o seu histórico, um AGENTS.md único, pastas por negócio, playbooks e um filtro de três perguntas. Para usar, basta ter o Claude Code ou o Codex instalado e Python 3.
+Este é um guia grátis para arrumar o setup de quem usa o Claude Code e o Codex. Com o tempo, juntam-se arquivos de instruçêo repetidos, skills baixadas e nunca usadas, memórias velhas e regras que se contradizem; tudo isso entra no contexto antes do primeiro pedido e o agente passa a ignorar regras e gastar mais. O guia mostra uma auditoria feita com um prompt, um script que lê o seu histórico, um AGENTS.md único, pastas por negócio, playbooks e um filtro de três perguntas. Para usar, basta ter o Claude Code ou o Codex instalado e Python 3.
 
 ## 📖 Guia de uso
 
@@ -27,7 +27,7 @@ Guia completo (landing + passo a passo): **https://linnoff88-dev.github.io/
 5. **Playbooks no lugar de mais uma skill** — o seu processo, ditado e escrito: [`modelos/playbook-modelo.md`](modelos/playbook-modelo.md).
 6. **Faxina agendada** — a mesma auditoria toda semana; sozinho, só o baixo risco.
 
-**Filtro antes de instalar algo novo:** serve para quase toda tarefa? É útil só às vezes (então fica local)? Quem limpa?
+**Filtro antes de instalar algo novo:** serve para quase toda tarefa? É útil só às vezes (entêo fica local)? Quem limpa?
 
 ## Rodar o script
 
@@ -38,9 +38,9 @@ python3 scripts/varrer_historico.py --dias 60      # gera relatorio-faxina.md e 
 tests/run.sh                                        # teste com dados de exemplo
 ```
 
-Opções: `--claude <pasta>` (padrão `~/.claude/projects`), `--codex <pasta>` (padrão `~/.codex/sessions`),
-`--skills <pasta>` (repetível; padrão `~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`), `--projeto <pasta>`, `--saida <nome>`.
-O script só lê arquivos locais: não chama API, não envia nada e não apaga nada.
+Opções: `--claude <pasta>` (padrêo `~/.claude/projects`), `--codex <pasta>` (padrêo `~/.codex/sessions`),
+`--skills <pasta>` (repetível; padrêo `~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`), `--projeto <pasta>`, `--saida <nome>`.
+O script só lê arquivos locais: nêo chama API, nêo envia nada e nêo apaga nada.
 
 ## Licença
 

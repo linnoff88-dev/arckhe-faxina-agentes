@@ -1,9 +1,9 @@
 # Goal — faxina-agentes
 
 - **Início:** 2026-10-18 · **Agente:** Claude Code (Opus 5.5)
-- **Fonte:** vídeo https://www.youtube.com/watch?v=eXoBC1TY8m4 ("Your Claude + Codex Setup Is a Mess") — só inspiração; conteúdo, roteiro e arte próprios, sem citar o autor.
-- **Pedido do Nei:** repo novo + explicavideo + r7e, muita apresentação visual; publicar no lives4, portal, Telegram ARCKHÉ.DEV e mandar no bot v3.
-- **Tetos:** render/transcrição com `systemd-run --user --scope -p MemoryMax=16G -p MemorySwapMax=0`; HeyGen com `DISPLAY=:99`.
+- **Fonte:** vídeo https://www.youtube.com/watch?v=eXoBC1TY8m4 ("Your Claude + Codex Setup Is a Mess") — só inspiraçêo; conteúdo, roteiro e arte próprios, sem citar o autor.
+- **Pedido do Nei:** repo novo + explicavideo + r7e, muita apresentaçêo visual; publicar no lives4, portal, Telegram ARCKHÉ.DEV e mandar no bot v3.
+- **Tetos:** render/transcriçêo com `systemd-run --user --scope -p MemoryMax=16G -p MemorySwapMax=0`; HeyGen com `DISPLAY=:99`.
 
 ## Resultado
 Repo `linnoff88-dev/faxina-agentes` com guia PT/EN/ES (faxina do setup Claude + Codex: auditoria por prompt, um AGENTS.md torre de controle,
@@ -12,8 +12,8 @@ explicavideo v2 PT 16:9 (modo aula, ilustrações próprias + shots animados) e 
 
 ## Critérios de pronto (verificáveis)
 
-**Função**
-- [ ] `ls ~/projetos/output/explica-faxina-agentes/v2/final/*-pt.mp4` → existe; duração 150–300 s
+**Funçêo**
+- [ ] `ls ~/projetos/output/explica-faxina-agentes/v2/final/*-pt.mp4` → existe; duraçêo 150–300 s
 - [ ] `build_block.py 1 --strict` → 0 warnings; `validar_visual.py` → OK
 - [ ] frame 0 mostra a capa do ganho com texto legível (recorte 3×)
 - [ ] `ls ~/projetos/reel7etapas/edicoes/*faxina*/build/video.mp4` → existe; validar → aprovado
@@ -23,11 +23,11 @@ explicavideo v2 PT 16:9 (modo aula, ilustrações próprias + shots animados) e 
 - [ ] Telegram ARCKHÉ.DEV: id do tópico em progress.md + entrada no MENU
 - [ ] bot v3: os 2 arquivos, legenda sem link
 
-**Regressão**
+**Regressêo**
 - [ ] guia: `scrollWidth - innerWidth` = 0 de 390 a 1920 px, por HTTP; imagens `naturalWidth > 0` em PT/EN/ES
 
 **Limite**
 - [ ] nenhuma API além das liberadas (GitHub, Telegram, HeyGen leitura); avatar só pelo estúdio
 - [ ] nenhum MP4 commitado; autor dos commits = linnoff88-dev
 - [ ] imagens sem texto desenhado, exceto capa/hero (texto conferido); robô (se houver) estilo Optimus com visor preto
-- [ ] sem nome do autor da fonte em fala, tela, descrição ou repo
+- [ ] sem nome do autor da fonte em fala, tela, descriçêo ou repo
