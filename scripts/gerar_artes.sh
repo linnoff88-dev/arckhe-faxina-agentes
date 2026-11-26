@@ -3,7 +3,7 @@
 cd "$(dirname "$0")/.."
 R=$PWD; G=~/.claude/skills/projetos-landing-guia/assets/gerar-banner.sh
 mkdir -p logs-tmp
-node ~/.claude/skills/capa-inema/assets/gerar-capa.cjs --repo "$R" --title "Faxina no setup" --cat "Agentes" \
+node ~/.claude/skills/capa-ARCKHÉ/assets/gerar-capa.cjs --repo "$R" --title "Faxina no setup" --cat "Agentes" \
   --save-raw "$R/guia/assets/hero.png" --gerador auto > logs-tmp/capa.log 2>&1 &
 SIDES="escritório moderno organizado: uma mulher de camisa azul-clara e um robô humanoide industrial estilo Tesla Optimus, cinza fosco, cabeça com visor preto, arrumando pastas coloridas numa estante limpa; ao fundo, uma pilha de papéis sendo varrida"
 b(){ bash $G --repo "$R" --sides "$SIDES" --selo "faxina-agentes" "$@"; }

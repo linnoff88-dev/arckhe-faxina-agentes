@@ -1,7 +1,7 @@
 // Mede o guia publicado: rolagem lateral (scrollWidth - innerWidth) de 390 a 1920 px e imagens carregadas, PT/EN/ES.
-// Uso: node tests/medir_guia.mjs [url-base]   (padrão: https://inematds.github.io/faxina-agentes/guia/)
+// Uso: node tests/medir_guia.mjs [url-base]   (padrão: https://linnoff88-dev.github.io/arckhe-/guia/)
 import { chromium } from 'playwright';
-const base = process.argv[2] || 'https://inematds.github.io/faxina-agentes/guia/';
+const base = process.argv[2] || 'https://linnoff88-dev.github.io/arckhe-/guia/';
 const larguras = [390, 768, 800, 1024, 1280, 1440, 1920];
 const b = await chromium.launch();
 let falhas = 0;
